@@ -32,4 +32,4 @@ jobs:
           ls -R
       
     - name: Build
-      run: msbuild DatabaseProjectWingtips/DatabaseProjectWingtips.sqlproj /p:RunSqlCodeAnalysis=true /t:Build
+      run: msbuild DatabaseProjectWingtips.sqlproj /p:RunSqlCodeAnalysis=true /t:Build
