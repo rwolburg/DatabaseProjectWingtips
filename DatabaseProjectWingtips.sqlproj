@@ -8,8 +8,7 @@
     <ModelCollation>1033, CI</ModelCollation>
   </PropertyGroup>
   <ItemGroup>
-    <None Include=".github\workflows\build-codeanalysis.yml" />
-    <None Include=".github\workflows\publish.yml" />
+    <Build Remove=".github\**" />
   </ItemGroup>
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
