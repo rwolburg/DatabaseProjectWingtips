@@ -17,10 +17,19 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+
+      
     - uses: actions/checkout@v4
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    - name: Debug files
+      run: |
+          echo "Current working directory:"
+          pwd
+          echo "List all files:"
+          ls -R
+      
     - name: Build
       run: msbuild DatabaseProjectWingtips/DatabaseProjectWingtips.sqlproj /p:RunSqlCodeAnalysis=true /t:Build
