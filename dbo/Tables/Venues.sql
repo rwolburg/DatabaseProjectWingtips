@@ -1,11 +1,11 @@
 CREATE TABLE [dbo].[Venues] (
     [VenueId]       INT            NOT NULL,
-    [VenueName]     NVARCHAR (128)  NOT NULL,
+    [VenueName]     NVARCHAR (130)  NOT NULL,
     [VenueType]     NVARCHAR (30)  NOT NULL,
     [AdminEmail]    NVARCHAR (130) NOT NULL,
     [AdminPassword] NVARCHAR (30)  NULL,
     [PostalCode]    NVARCHAR (20)  NULL,
-    [CountryCode]   CHAR (4)       NOT NULL,
+    [CountryCode]   CHAR (3)       NOT NULL,
     [RowVersion]    ROWVERSION     NOT NULL,
     CONSTRAINT [PK_Venues] PRIMARY KEY CLUSTERED ([VenueId] ASC),
     CONSTRAINT [FK_Venues_Countries] FOREIGN KEY ([CountryCode]) REFERENCES [dbo].[Countries] ([CountryCode]),
