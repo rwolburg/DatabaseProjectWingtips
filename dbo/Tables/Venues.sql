@@ -2,7 +2,7 @@ CREATE TABLE [dbo].[Venues] (
     [VenueId]       INT            NOT NULL,
     [VenueName]     NVARCHAR (128)  NOT NULL,
     [VenueType]     NVARCHAR (30)  NOT NULL,
-    [AdminEmail]    NVARCHAR (128) NOT NULL,
+    [AdminEmail]    NVARCHAR (130) NOT NULL,
     [AdminPassword] NVARCHAR (30)  NULL,
     [PostalCode]    NVARCHAR (20)  NULL,
     [CountryCode]   CHAR (3)       NOT NULL,
